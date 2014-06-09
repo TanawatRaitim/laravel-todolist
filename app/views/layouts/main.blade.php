@@ -6,5 +6,8 @@
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" media="all" />
 </head>
 <body>
+	<div class="container">
+		@yield('content')
+	</div>
 </body>
 </html>

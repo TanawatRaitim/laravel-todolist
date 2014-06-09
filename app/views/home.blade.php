@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-	Homepage
+	Hello Laravel Todo List Application.
 @stop
