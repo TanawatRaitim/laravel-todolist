@@ -2,7 +2,8 @@
 
 class Item extends Eloquent{
 	public function mark(){
-		$this->done = $this->done ? false : true;
+		
+		$this->done = $this->done ? false : true;			//todo.done
 		//$this->name = "Go to Korea";
 		$this->save();
 	}

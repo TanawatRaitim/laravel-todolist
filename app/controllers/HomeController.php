@@ -2,19 +2,6 @@
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
 	public function showWelcome()
 	{
 		return View::make('hello');
@@ -63,6 +50,21 @@ class HomeController extends BaseController {
 		$item->save();
 		
 		return Redirect::route('home');
+		
+	}
+	
+	public function getDelete(Item $task){		//class name
+		//echo get_class($task);			//return class name
+		
+		if($task->owner_id == Auth::user()->id){
+			$task->delete();
+		}
+		
+		return Redirect::route('home');
+		
+	}
+	
+	public function postDelete(){
 		
 	}
 
