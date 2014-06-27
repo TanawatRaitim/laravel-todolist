@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Our todo Application</title>
+	<title>{{ $title }}</title>
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" media="all" />
 </head>
 <body>

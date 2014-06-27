@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title')My to do list.@stop
+
 @section('content')
 
 	@foreach($errors->all() as $error)

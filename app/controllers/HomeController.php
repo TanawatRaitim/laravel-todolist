@@ -12,7 +12,8 @@ class HomeController extends BaseController {
 		
 		$items = Auth::user()->items;
 		return View::make('home', array(
-			'items'	=>	$items
+			'items'	=>	$items,
+			'title'=> 'Welcome to todo list app.'
 		));
 		
 	}
@@ -32,7 +33,9 @@ class HomeController extends BaseController {
 	}
 	
 	public function getNew(){
-		return View::make('new');
+		return View::make('new', array(
+				'title'=>'Create new todo list'
+		));
 	}
 	
 	public function postNew(){

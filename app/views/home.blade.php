@@ -1,5 +1,10 @@
 @extends('layouts.main')
 
+
+@section('title')
+	My to do list
+@stop
+
 @section('content')
 	<h3>Your Items <small>(<a href="{{ URL::route('new') }}">New task</a>)</small></h3>
 	
@@ -8,7 +13,6 @@
 		list-style: none;
 	}
 </style>	
-	
 	<ul>
 	@foreach($items as $item)
 		<li>
@@ -20,8 +24,6 @@
 				{{ e($item->name) }} <small>(<a href="{{ URL::route('delete', $item->id)}}">x</a>)</small>
 			{{ Form::close() }}
 		</li>
-	
 	@endforeach
 	</ul>
-	
 @stop
